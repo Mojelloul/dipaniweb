@@ -21,17 +21,21 @@
         <div class="container">
             <div class="hero-content">
                 <div class="attention-hook">
-                    <div class="hook-badge">
-                        <i class="fas fa-wrench"></i>
-                        <span>Robinet qui fuit ?</span>
+                    <div class="hook-container">
+                        <div class="hook-badge">
+                            <i class="fas fa-wrench"></i>
+                            <span>Robinet qui fuit ?</span>
+                        </div>
+                        <div class="hook-content">
+                            <h2 class="hook-headline">
+                                <span class="highlight">Besoin d'un expert maintenant ?</span>
+                                <span class="highlight-time">En 30 minutes, votre plombier est là !</span>
+                            </h2>
+                            <p class="hook-subtext">
+                                Plus de stress, plus d'attente. Dipani trouve le bon expert près de chez vous, quand vous en avez besoin.
+                            </p>
+                        </div>
                     </div>
-                    <h2 class="hook-headline">
-                        Besoin d'un expert maintenant ? 
-                        <span class="highlight">En 30 minutes</span>, votre plombier est là !
-                    </h2>
-                    <p class="hook-subtext">
-                        Plus de stress, plus d'attente. Dipani trouve le bon expert près de chez vous, quand vous en avez besoin.
-                    </p>
                 </div>
                 <h1>Dipani, votre assistant intelligent pour tous vos besoins quotidiens</h1>
                 <p class="hero-subtitle">Connectez-vous avec des experts locaux qualifiés en quelques clics. Notre IA vous trouve le prestataire parfait pour chaque situation.</p>
@@ -76,23 +80,7 @@
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Télécharger l'application</a>
                     <a href="#how-it-works" class="btn btn-secondary">Comment ça marche ?</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="app-preview">
-                    <img src="https://placehold.co/300x600/7854F7/FFFFFF?text=Dipani+App" alt="Dipani App Screenshot">
-                    <div class="app-badges">
-                        <a href="#" class="app-badge">
-                            <i class="fab fa-app-store"></i>
-                            <span>App Store</span>
-                        </a>
-                        <a href="#" class="app-badge">
-                            <i class="fab fa-google-play"></i>
-                            <span>Play Store</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -674,6 +662,49 @@
             </div>
         </div>
     </footer>
+
+    <!-- Popup de bienvenue -->
+    <div class="welcome-popup" id="welcomePopup">
+        <div class="popup-content">
+            <button class="close-popup" id="closePopup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-header">
+                <div class="header-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h2>Bienvenue sur Dipani</h2>
+            </div>
+            <div class="popup-body">
+                <div class="message-container">
+                    <div class="urgent-badge">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Urgent</span>
+                    </div>
+                    <h3 class="main-message">Robinet qui fuit ?</h3>
+                    <div class="highlight-box">
+                        <p class="highlight-text">Besoin d'un expert maintenant ?</p>
+                        <p class="highlight-time">En 30 minutes, votre plombier est là !</p>
+                    </div>
+                    <p class="sub-message">Plus de stress, plus d'attente. Dipani trouve le bon expert près de chez vous, quand vous en avez besoin.</p>
+                </div>
+                <div class="popup-features">
+                    <div class="popup-feature">
+                        <i class="fas fa-bolt"></i>
+                        <span>Réponse en moins de 30 minutes</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Prestataires vérifiés</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Prix transparents</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
