@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --primary-color: #7854F7;
-    --secondary-color: #5D3EBC;
+    --primary-color: #bd0a28;
+    --secondary-color: #8f081e;
     --accent-color: #FF6B6B;
     --text-color: #333333;
     --light-text: #666666;
@@ -40,12 +40,43 @@ body {
 }
 
 .logo {
-    color: var(--primary-color);
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 2px;
     margin: 0;
+}
+
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-image {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    margin-right: -18px;
+}
+
+.logo-text {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 6px;
     text-transform: uppercase;
+    margin-left: -6px;
+}
+
+@media screen and (max-width: 576px) {
+    .logo-image {
+        height: 100px;
+        width: auto;
+        object-fit: contain;
+        margin-right: -5px;
+    }
+    
+    .logo-text {
+        font-size: 1.8rem;
+        letter-spacing: 5px;
+    }
 }
 
 a {
@@ -535,6 +566,7 @@ section {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(120, 84, 247, 0.1);
+    text-align: center;
 }
 
 .feature::before {
@@ -564,6 +596,8 @@ section {
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .feature i::after {
@@ -583,6 +617,7 @@ section {
     font-size: 1.4rem;
     color: var(--primary-color);
     font-weight: 600;
+    text-align: center;
 }
 
 .feature p {
@@ -590,6 +625,7 @@ section {
     line-height: 1.6;
     font-size: 1.1rem;
     margin: 0;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -800,9 +836,10 @@ section {
     font-size: 3.5rem;
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
     position: relative;
-    display: inline-block;
+    display: block;
+    width: 100%;
 }
 
 .tech-logo::after {
@@ -846,6 +883,7 @@ section {
 .tech-card ul {
     padding-left: 25px;
     margin-bottom: 25px;
+    text-align: left;
 }
 
 .tech-card ul li {
@@ -855,10 +893,11 @@ section {
     color: var(--light-text);
     line-height: 1.6;
     font-size: 1.05rem;
+    text-align: left;
 }
 
 .tech-card ul li::before {
-    content: "→";
+    content: "✓";
     color: var(--primary-color);
     position: absolute;
     left: 0;
@@ -913,6 +952,7 @@ section {
 .tech-conclusion ul {
     list-style: none;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .tech-conclusion ul li {
@@ -922,13 +962,15 @@ section {
     padding-left: 35px;
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: left;
 }
 
 .tech-conclusion ul li::before {
-    content: "✨";
+    content: "✓";
     position: absolute;
     left: 0;
-    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .tech-conclusion p {
@@ -1475,12 +1517,14 @@ table tr:hover {
 .roi-info ul {
     list-style: none;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .roi-info ul li {
     margin-bottom: 15px;
     padding-left: 30px;
     position: relative;
+    text-align: left;
 }
 
 .roi-info ul li:before {
@@ -1538,6 +1582,7 @@ table tr:hover {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(120, 84, 247, 0.1);
+    text-align: center;
 }
 
 .strength-card::before {
@@ -1569,7 +1614,7 @@ table tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
     position: relative;
 }
 
@@ -1578,23 +1623,7 @@ table tr:hover {
     color: var(--primary-color);
     position: relative;
     z-index: 1;
-}
-
-.strength-icon::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(120, 84, 247, 0.2) 0%, rgba(120, 84, 247, 0) 100%);
-    border-radius: 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.strength-card:hover .strength-icon::after {
-    opacity: 1;
+    text-align: center;
 }
 
 .strength-card h3 {
@@ -1602,6 +1631,7 @@ table tr:hover {
     color: var(--primary-color);
     margin-bottom: 15px;
     font-weight: 600;
+    text-align: center;
 }
 
 .strength-card p {
@@ -1609,12 +1639,14 @@ table tr:hover {
     line-height: 1.6;
     margin-bottom: 25px;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 .strength-features {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
 .strength-features li {
@@ -1624,6 +1656,7 @@ table tr:hover {
     position: relative;
     font-size: 1.05rem;
     line-height: 1.5;
+    text-align: left;
 }
 
 .strength-features li::before {
@@ -1631,6 +1664,38 @@ table tr:hover {
     position: absolute;
     left: 0;
     color: var(--primary-color);
+    font-weight: bold;
+}
+
+.our-advantage ul, .competitor-disadvantage ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.our-advantage ul li, .competitor-disadvantage ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.our-advantage ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.competitor-disadvantage ul li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #999;
     font-weight: bold;
 }
 
@@ -1861,6 +1926,7 @@ table tr:hover {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(120, 84, 247, 0.1);
+    text-align: center;
 }
 
 .competition-card:hover {
@@ -1876,12 +1942,13 @@ table tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
 }
 
 .competition-icon i {
     font-size: 2.5rem;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .competition-card h3 {
@@ -1889,6 +1956,7 @@ table tr:hover {
     color: var(--primary-color);
     margin-bottom: 25px;
     font-weight: 600;
+    text-align: center;
 }
 
 .comparison-content {
@@ -1901,6 +1969,7 @@ table tr:hover {
     padding: 20px;
     border-radius: 15px;
     background: linear-gradient(135deg, rgba(120, 84, 247, 0.05) 0%, rgba(120, 84, 247, 0.1) 100%);
+    text-align: center;
 }
 
 .our-advantage {
@@ -1916,6 +1985,7 @@ table tr:hover {
     font-size: 1.2rem;
     margin-bottom: 15px;
     font-weight: 600;
+    text-align: center;
 }
 
 .our-advantage h4 {
@@ -1930,6 +2000,7 @@ table tr:hover {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
 .our-advantage ul li, .competitor-disadvantage ul li {
@@ -1938,6 +2009,7 @@ table tr:hover {
     position: relative;
     font-size: 1rem;
     line-height: 1.5;
+    text-align: left;
 }
 
 .our-advantage ul li::before {
