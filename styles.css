@@ -766,7 +766,7 @@ section {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 25px;
     flex-wrap: wrap;
 }
@@ -774,29 +774,50 @@ section {
 .video-content {
     flex: 1;
     min-width: 300px;
-    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 69.78%; /* Ratio pour PC */
+    background: #000;
+    border-radius: 15px;
+}
+
+.demo-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
 }
 
 .video-content h3 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: var(--primary-color);
 }
 
-.video-content p {
-    margin-bottom: 0;
-    line-height: 1.6;
+.video-content i {
+    margin-right: 10px;
 }
 
-.video-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-
-.video-image img {
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+@media screen and (max-width: 768px) {
+    .video-container {
+        max-width: 270px;
+        padding-top: 177.78%; /* Ratio 9:16 pour mobile */
+    }
+    
+    .video-assistance {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /* Technologies */
@@ -1400,16 +1421,14 @@ table tr:hover {
 
 /* Video Demo Section */
 .video-container {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
     position: relative;
-    padding-bottom: 56.25%; /* Pour un ratio 16:9 */
-    height: 0;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    background-color: #000;
+    padding-top: 69.78%; /* Ratio pour PC */
+    background: #000;
+    border-radius: 15px;
 }
 
 .demo-video {
@@ -1418,7 +1437,8 @@ table tr:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .video-content h3 {
@@ -1437,19 +1457,21 @@ table tr:hover {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 25px;
     flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
-    .video-assistance {
-        flex-direction: column;
+    .video-container {
+        max-width: 270px;
+        padding-top: 177.78%; /* Ratio 9:16 pour mobile */
     }
     
-    .video-container {
-        margin-top: 20px;
-        width: 100%;
+    .video-assistance {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
